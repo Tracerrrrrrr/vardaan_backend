@@ -7,7 +7,7 @@ const port=8080 || process.env.SERVER
 
 app.use(
     cors({
-      origin: ["http://localhost:3000"],
+      origin: ["http://localhost:3000","https://tracerrrrrrr.github.io"],
       credentials: true,
     })
   );
