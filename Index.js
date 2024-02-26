@@ -1,15 +1,17 @@
 const express=require("express")
 const app=express()
-const port=8080
 const cors=require("cors")
+ const dotenv = require('dotenv');
+  dotenv.config();
+const port=8080 || process.env.SERVER
+
 app.use(
     cors({
       origin: ["http://localhost:3000"],
       credentials: true,
     })
   );
-  const dotenv = require('dotenv');
-  dotenv.config();
+ 
   const mongoose=require('mongoose')
   app.use(express.json())
   app.use('/public', express.static('public'));
